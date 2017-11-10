@@ -1,0 +1,9 @@
+{
+  "name": "chatbot_luis_handon",
+  "version": "0.0.0",
+  "description": "chatbot_luis_handon",
+  "main": "app.js",
+  "author": {
+    "name": "ChungWei"
+  }
+}
