@@ -10,7 +10,8 @@ var luisAppUrl = process.env.LUIS_API_URL;
 var server = restify.createServer();
 
 server.use(restify.bodyParser());
-server.post('/api/tickets', ticketsApi);
+server.post('/api/tickets', ticketsApi.create);
+server.post('/api/status', ticketsApi.status);
 
 server.listen(port, () => {
     console.log(`${server.name} listening to ${server.url}`);
@@ -124,6 +125,10 @@ bot.dialog('SubmitTicket', [
     }
 ]).triggerAction({
     matches: 'SubmitTicket'
+}).cancelAction('cancelAction', 'I will cancel that.', {
+    matches: /^cancel$/i
+}).beginDialogAction('showHelpAction', 'Help', {
+    matches: /^help$/i
 });
 
 bot.dialog('Help',
@@ -133,4 +138,12 @@ bot.dialog('Help',
     }
 ).triggerAction({
     matches: 'Help'
+});
+
+bot.dialog('AskStatus',
+    (session, args, next) => {
+        session.endDialog(`status`);
+    }
+).triggerAction({
+    matches: 'AskStatus'
 });

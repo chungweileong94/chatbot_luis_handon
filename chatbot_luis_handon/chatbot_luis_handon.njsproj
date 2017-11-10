@@ -7,7 +7,7 @@
     <Environment>PORT=8888
 MICROSOFT_APP_ID=
 MICROSOFT_APP_PASSWORD=
-LUIS_MODEL_URL=https://eastus2.api.cognitive.microsoft.com/luis/v2.0/apps/81027c2a-5411-4b54-90f3-124e55cadd1e?subscription-key=b12fc105788b4bc885e222d0012d9ebe&amp;amp;verbose=true&amp;amp;timezoneOffset=0</Environment>
+LUIS_MODEL_URL=https://eastus2.api.cognitive.microsoft.com/luis/v2.0/apps/81027c2a-5411-4b54-90f3-124e55cadd1e?subscription-key=b12fc105788b4bc885e222d0012d9ebe&amp;verbose=true&amp;timezoneOffset=0&amp;q=</Environment>
     <NodejsPort>8888</NodejsPort>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
