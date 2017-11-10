@@ -5,5 +5,9 @@
   "main": "app.js",
   "author": {
     "name": "ChungWei"
+  },
+  "dependencies": {
+    "botbuilder": "^3.11.0",
+    "restify": "^4.1.1"
   }
 }
